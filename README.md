@@ -4,3 +4,4 @@ Github repo for BlueSource ruby automation
 
 ## Members
 * Lewis Gordon - [LGordon2](https://github.com/LGordon2)
+* John Martin - [JohnMart](https://github.com/JohnMart)
