@@ -10,3 +10,4 @@ Staging environment: [BlueSource Staging](http://bluesourcestaging.herokuapp.com
 * Andrew Spell - [AndrewSS](https://github.com/AndrewSS)
 * Alissa Taylor - [alissataylor](https://github.com/alissataylor)
 * Kevin Munro - [KevinMunro](https://github.com/KevinMunro)
+* Jock Lanier - [jocklnr](https://github.com/Jocklnr)
