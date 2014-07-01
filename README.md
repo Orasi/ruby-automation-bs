@@ -9,3 +9,4 @@ Staging environment: [BlueSource Staging](http://bluesourcestaging.herokuapp.com
 * John Martin - [JohnMart](https://github.com/JohnMart)
 * Andrew Spell - [AndrewSS](https://github.com/AndrewSS)
 * Alissa Taylor - [alissataylor](https://github.com/alissataylor)
+* David Quach - [davidnquach](https://github.com/davidnquach)
