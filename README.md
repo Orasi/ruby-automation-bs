@@ -11,3 +11,4 @@ Staging environment: [BlueSource Staging](http://bluesourcestaging.herokuapp.com
 * Alissa Taylor - [alissataylor](https://github.com/alissataylor)
 * Kevin Munro - [KevinMunro](https://github.com/KevinMunro)
 * David Quach - [davidnquach](https://github.com/davidnquach)
+* Jock Lanier - [jocklnr](https://github.com/Jocklnr)
