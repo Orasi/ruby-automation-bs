@@ -2,6 +2,8 @@
 
 Github repo for BlueSource ruby automation
 
+Staging environment: [BlueSource Staging](http://bluesourcestaging.herokuapp.com/)
+
 ## Members
 * Lewis Gordon - [LGordon2](https://github.com/LGordon2)
 * John Martin - [JohnMart](https://github.com/JohnMart)
