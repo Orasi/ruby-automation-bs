@@ -12,3 +12,4 @@ Staging environment: [BlueSource Staging](http://bluesourcestaging.herokuapp.com
 * Kevin Munro - [KevinMunro](https://github.com/KevinMunro)
 * David Quach - [davidnquach](https://github.com/davidnquach)
 * Jock Lanier - [jocklnr](https://github.com/Jocklnr)
+* Damien Storm - [ryderstorm](https://github.com/ryderstorm)
