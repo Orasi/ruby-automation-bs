@@ -15,3 +15,4 @@ Feature: Filter By Employee Page
 		Given the employee page
 		When I filter using the show inactives button
 		Then the employee table should show only the inactive employees
+		
