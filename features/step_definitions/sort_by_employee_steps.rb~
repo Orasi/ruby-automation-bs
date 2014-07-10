@@ -1,0 +1,17 @@
+Given (/The employee page/i) do
+	@browser.goto 'https://bluesourcestaging.herokuapp.com'
+end
+
+When (/I sort by (.*) in (.*) order/i) do |sortby| |order|
+	@browser.table(class: 'table').wait_until_present
+	@browser.link(text: /#{sortby}/i).click
+	if order == "ascending"
+          {
+          @browser.link(text: /#{sortby}/i).click
+          }
+end
+
+Then (/Then the "(.*)" column should be sorted in "(.*)" order /) do |sortby| |order|
+	myTable=@browser.table(class: "table")
+	myTable[
+end
