@@ -4,3 +4,4 @@ gem 'cucumber'
 gem 'simplecov', group: :test
 gem 'rubocop'
 gem 'rspec-expectations', require: 'rspec/expectations'
+gem 'watir-webdriver'
