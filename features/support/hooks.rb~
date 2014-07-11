@@ -4,7 +4,7 @@ Before do
 	@browser = browser
 end
 
-After do 
+After() do 
 	@browser.link(text: 'Logout').click
 end
 
