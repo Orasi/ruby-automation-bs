@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Orasi/ruby-automation-bs.svg?branch=master)](https://travis-ci.org/Orasi/ruby-automation-bs)
 
-Github repo for BlueSource ruby automation
+Github repo for BlueSource Ruby automation
 
 Staging environment: [BlueSource Staging](http://bluesourcestaging.herokuapp.com/)
 
