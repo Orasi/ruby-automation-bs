@@ -1,5 +1,3 @@
-
-
 When (/I change the number of employees viewed per page to (\d+)/) do |pages|
 	@browser.select_list(id: 'employee_preferences_resourcesPerPage').select pages 
 end
