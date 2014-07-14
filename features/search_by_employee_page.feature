@@ -12,12 +12,10 @@ Feature: Search By Employee Page
 		Given that I am logged in as a company admin
 		And I navigated to the employees page
 
-  	@only
   	Scenario: Search By First Name
 		When I search for an employee by their first name
 		Then the results should show the employees fitting the search criteria
 	
-	@skip
 	Scenario: Search By Last Name
 	  	When I search for an employee by their last name
 	  	Then the results should show the employees fitting the search criteria
