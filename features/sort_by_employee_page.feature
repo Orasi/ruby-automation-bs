@@ -1,4 +1,3 @@
-@run_this
 Feature: Sort By Employee Page
 	As a user I should be able to sort by any column in ascending or descending order and results should be shown.
 	Scenario: Sort First Name in Ascending Order
