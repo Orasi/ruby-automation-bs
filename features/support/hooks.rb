@@ -5,7 +5,10 @@ Before do
 end
 
 After do 
-	@browser.link(text: 'Logout').click
+  if @browser.link(href: '/logout').exists?
+    @browser.link(href: '/logout').click
+    @browser.link(id: 'login-help-link').wait_until_present
+  end
 end
 
 at_exit do 

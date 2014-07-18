@@ -21,17 +21,13 @@ Then (/the (.*) column should be sorted in (.*) order/i) do |sortby, order|
 	if order=="ascending"
 		i=1	
 		while (i<(rows-1))
-			cell_text = @browser.table(class: 'table')[i][column_index].text
-			next_cell_text = @browser.table(class: 'table')[i+1][column_index].text
-			expect(@browser.table(class: 'table')[i][column_index].text).to be <= @browser.table(class: 'table')[i+1][column_index].text	
+			expect(@browser.table(class: 'table')[i][headers.index(sortby.downcase)].text).to be <= @browser.table(class: 'table')[i+1][column_index].text	
 			i=i+1
 		end
 	else
 		i=1
 		while (i<(rows-1))
-			cell_text = @browser.table(class: 'table')[i][column_index].text
-			next_cell_text = @browser.table(class: 'table')[i+1][column_index].text
-			expect(@browser.table(class: 'table')[i+1][column_index].text).to be <= @browser.table(class: 'table')[i][column_index].text
+			expect(@browser.table(class: 'table')[i+1][headers.index(sortby.downcase)].text).to be <= @browser.table(class: 'table')[i][column_index].text
 			i=i+1
 		end
 	end	
