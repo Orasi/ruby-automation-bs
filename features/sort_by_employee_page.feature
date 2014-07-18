@@ -39,7 +39,6 @@ Feature: Sort By Employee Page
     	Given the employee page
 		When I sort by project in descending order
 		Then the Project column should be sorted in descending order
-	@first	
   	Scenario: Sort Location in Ascending Order
     	Given the employee page
 		When I sort by location in ascending order
