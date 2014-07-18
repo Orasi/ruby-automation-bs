@@ -1,0 +1,24 @@
+header sortby:
+	sort by:
+		sortby: 'First Name'
+header sortby:
+	sort by:
+		sortby: 'Last Name'		
+header sortby:
+	sort by:
+		sortby: 'Title'	
+header sortby:
+	sort by:
+		sortby: 'Supervisor'		
+header sortby:
+	sort by:
+		sortby: 'Project'	
+header sortby:
+	sort by:
+		sortby: 'Location'
+sort order:
+	in:
+		order: 'ascending'
+sort order:
+	in:
+		order: 'descending'

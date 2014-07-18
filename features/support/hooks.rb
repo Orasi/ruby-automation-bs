@@ -13,4 +13,3 @@ After do
     @browser.link(id: 'login-help-link').wait_until_present
   end
 end
-

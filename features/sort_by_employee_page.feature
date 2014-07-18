@@ -1,6 +1,5 @@
 Feature: Sort By Employee Page
 	As a user I should be able to sort by any column in ascending or descending order and results should be shown.
-
 	Scenario: Sort First Name in Ascending Order
     	Given the employee page
 		When I sort by first name in ascending order
@@ -40,7 +39,6 @@ Feature: Sort By Employee Page
     	Given the employee page
 		When I sort by project in descending order
 		Then the Project column should be sorted in descending order
-		
   	Scenario: Sort Location in Ascending Order
     	Given the employee page
 		When I sort by location in ascending order
