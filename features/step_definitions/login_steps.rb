@@ -12,5 +12,6 @@ And (/click the login button/i) do
 end
 
 Then (/I should land on the homepage/) do
-	@browser.element(class: "navbar-collapse").text.include? "Logout"
+	navbar_text = @browser.element(class: "navbar-collapse").text
+	expect(navbar_text).to include("Logout")
 end
