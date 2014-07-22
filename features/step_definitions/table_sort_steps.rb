@@ -1,4 +1,3 @@
-# rubocop:disable Style/LineLength
 Given(/The employee page/i) do
   @browser.goto 'https://bluesourcestaging.herokuapp.com'
   @browser.link(text: "Can't log in?").wait_until_present
