@@ -1,17 +1,17 @@
-Given (/The login page/i) do
-	@browser.goto 'https://bluesourcestaging.herokuapp.com'
+Given(/The login page/i) do
+  @browser.goto 'https://bluesourcestaging.herokuapp.com'
 end
 
-When (/I enter in valid credentials/i) do
-	@browser.text_field(id: 'employee_username').set "company.admin"
-	@browser.text_field(id: 'employee_password').set "password"
+When(/I enter in valid credentials/i) do
+  @browser.text_field(id: 'employee_username').set 'company.admin'
+  @browser.text_field(id: 'employee_password').set 'password'
 end
 
-And (/click the login button/i) do 
-	@browser.button(value: 'Login').click
+And(/click the login button/i) do
+  @browser.button(value: 'Login').click
 end
 
-Then (/I should land on the homepage/) do
-	navbar_text = @browser.element(class: "navbar-collapse").text
-	expect(navbar_text).to include("Logout")
+Then(/I should land on the homepage/) do
+  navbar_text = @browser.element(class: 'navbar-collapse').text
+  expect(navbar_text).to include('Logout')
 end

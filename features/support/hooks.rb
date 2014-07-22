@@ -1,10 +1,12 @@
 Before do
-	@employee = {first_name: "David", 
-				last_name: "Quach", 
-				title: "Manager", 
-				supervisor: 'Adam Thomas', 
-				project: 'WatchDogs2', 
-				location: 'Greensboro'}
+  @employee = {
+    first_name: 'David',
+    last_name: 'Quach',
+    title: 'Manager',
+    supervisor: 'Adam Thomas',
+    project: 'WatchDogs2',
+    location: 'Greensboro'
+  }
 end
 
 After do
