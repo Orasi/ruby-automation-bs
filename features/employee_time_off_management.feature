@@ -8,20 +8,20 @@ Feature: Employee Time Off Management
 		And I navigate to the manage pto page
 	
 	Scenario: Employee at Orasi for less than 1 year
-		When I select an employee who has been at Orasi for less than 1 year
-		Then the data on the employee summary page should match the data on the manage pto page
+      When I select an employee who has been at Orasi for less than 1 year
+      Then the data on the employee summary page should match the data on the manage pto page
 		
 	Scenario: Employee at Orasi for more than 3 years
-		When I select an employee who has been at Orasi for more than 3 years
-		Then the data on the employee summary page should match the data on the manage pto page
+      When I select an employee who has been at Orasi for more than 3 years
+      Then the data on the employee summary page should match the data on the manage pto page
 		
 	Scenario: Employee at Orasi for more than 6 years
-		When I select an employee who has been at Orasi for more than 6 years
-		Then the data on the employee summary page should match the data on the manage pto page
+      When I select an employee who has been at Orasi for more than 6 years
+      Then the data on the employee summary page should match the data on the manage pto page
 		
 	Scenario: Employee has a mid-year anniversary
-		When I select an employee who has an anniversary during the middle of the year
-		Then the data on the employee summary page should match the data on the manage pto page
+      When I select an employee who has an anniversary during the middle of the year
+      Then the data on the employee summary page should match the data on the manage pto page
 		
 		
 	#Background: Navigation to Employee Summary Page
