@@ -38,5 +38,3 @@ Feature: Add Vacation For Employee
 		| duration |
 		| full day |
 		| half day |
-		
-		
