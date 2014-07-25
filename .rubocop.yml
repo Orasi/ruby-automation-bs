@@ -1,0 +1,6 @@
+# Please don't change me if you don't have to.
+Style/Encoding:
+  Enabled: false
+
+Style/LineLength:
+  Max: 90

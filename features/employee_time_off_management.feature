@@ -23,7 +23,6 @@ Feature: Employee Time Off Management
 		When I select an employee who has an anniversary during the middle of the year
 		Then the data on the employee summary page should match the data on the manage pto page
 		
-		
 	#Background: Navigation to Employee Summary Page
 	#	Given that I am logged in as <user>
 	#	And I navigate to the employee summary page
@@ -47,7 +46,7 @@ Feature: Employee Time Off Management
 	#	| 3		| 15			| 10		|
 	#	| 6		| 20			| 10        |
 	
-	#Senario Outline: Employee Mid-Year Anniversary
+	#Scenario Outline: Employee Mid-Year Anniversary
 		When I select an employee who has an anniversary date of <anniv date>
 		Then the employee should have <vacation days> and <sick days> and the data on the employee summary page should match the data on the manage pto page
 	
