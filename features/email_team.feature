@@ -4,7 +4,7 @@ Feature: Email Team
 	Scenario Outline: Email Direct Reports
 		Given that I am logged in as <user>
 		When I select the email team button
-		Then I should be able to send an email to my direct reports
+		Then I should be able to send an email to my active direct reports
 		
 		Examples:
 		
