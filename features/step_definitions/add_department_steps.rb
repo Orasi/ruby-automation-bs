@@ -3,7 +3,8 @@ When(/I click on the (.*) link/) do |link|
 end
 
 And(/create (?:an|a) (\w+) department/) do |name|
-  @browser.text_field(id: 'department_name').set name
+  @name = name
+  @browser.text_field(id: 'department_name').set @name 
   @browser.button(value: 'Create Department').click
 end
 

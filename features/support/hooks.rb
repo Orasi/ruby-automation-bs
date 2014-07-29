@@ -9,9 +9,18 @@ Before do
   }
 end
 
+
 After do
   if @browser.link(href: '/logout').exists?
     @browser.link(href: '/logout').click
     @browser.link(id: 'login-help-link').wait_until_present
   end
+end
+
+
+After('@add_departments') do
+  @browser.link(text: 'Admin').click
+  @browser.link(text: 'Departments').click
+  @browser.li(text: /#{@name}/i).span(class: 'glyphicon-trash').click
+  @browser.alert.ok
 end
