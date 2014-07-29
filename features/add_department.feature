@@ -1,4 +1,4 @@
-@test
+@add_departments
 Feature: Add Departments
 
 	Orasi consists of multiple departments and subdepartments
