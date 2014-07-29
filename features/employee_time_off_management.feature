@@ -2,8 +2,8 @@ Feature: Employee Time Off Management
 	As an manager or higher user, I should be able to verify that the data on the employee summary page for time off matches the manage pto page. 
 	
 	Background: Navigation to Employee Summary Page
-		Given that I am logged in as a manager or higher
-		And I navigate to the employee summary page
+		Given that I am logged in as a company admin
+		And I navigate to the employee page
 		And I note the data shown on the employee summary page
 		And I navigate to the manage pto page
 	

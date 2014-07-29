@@ -16,3 +16,10 @@ Feature: Add Departments
 	And create an iPhone department
 	Then the iPhone department should show on the departments page
 	And an alert should appear confirming the department was added 
+	
+	Scenario: Adding Subdepartments
+	When I click on the add department link 
+	And create an iPhone department with Mobile as the parent department  
+	Then the iPhone Department should show on the departments page
+	And placed under the Mobile department
+	And an alert should appear confirming the department was added
