@@ -11,7 +11,8 @@ And(/create (?:a|an) (\w+) department with (\w+) as the parent department/) do |
 end
 
 And(/create (?:an|a) (\w+) department/) do |name|
-  @browser.text_field(id: 'department_name').set name
+  @name = name
+  @browser.text_field(id: 'department_name').set @name 
   @browser.button(value: 'Create Department').click
 end
 
