@@ -20,14 +20,3 @@ at_exit do
   browser.close
 end
 
-module AddDepartmentHelper
-  def department_name=(name)
-    @department_name = name
-  end
-
-  def department_name
-    @department_name
-  end
-end
-
-World(AddDepartmentHelper)
