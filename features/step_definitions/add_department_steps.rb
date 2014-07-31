@@ -2,12 +2,14 @@ When(/I click on the (.*) link/) do |link|
   @browser.link(text: /#{link}/i).click
 end
 
-And(/create (?:a|an) (\w+) department with (\w+) as the parent department/) do |department, parent_department|
+# rubocop:disable Style/LineLength
+And(/create (?:a|an) (\w+) department with (\w+) as the parent department/) do |department, parent_dept|
   @department = department
   @browser.text_field(id: 'department_name').set @department
-  @browser.select_list(id: 'department_department_id').select parent_department
+  @browser.select_list(id: 'department_department_id').select parent_dept
   @browser.button(value: 'Create Department').click
 end
+# rubocop:enable Style/LineLength
 
 And(/create (?:an|a) (\w+) department with no parent department/) do |name|
   @department = name
