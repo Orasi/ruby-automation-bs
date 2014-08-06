@@ -9,3 +9,11 @@ end
 And(/I navigated to the (\w*) page/) do |page|
   @browser.element(class: 'navbar').link(text: /#{page}/i).click
 end
+
+Given(/I navigate to the (\w*) page/) do |page|
+  @browser.element(class: 'navbar').link(text: /#{page}/i).click
+end
+
+And(/I navigate to the (\w*) page/) do |page|
+  @browser.element(class: 'navbar').link(text: /#{page}/i).click
+end
