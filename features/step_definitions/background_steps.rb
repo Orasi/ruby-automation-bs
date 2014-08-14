@@ -1,8 +1,4 @@
-Given(/that I am logged in as a (\w+\s*\w+)/) do |user|
-  login_as_user(user)
-end
-
-Given(/that I am logged in as (\w+\s*\w+)/) do |user|
+Given(/that I am logged in as (.*)/i) do |user|
   login_as_user(user)
 end
 
@@ -20,16 +16,15 @@ end
 
 # rubocop:disable Style/MethodLength
 def login_as_user(user)
-  case user
-  when 'user'
+  if user == 'user'
     user = 'test.user'
-  when 'manager'
+  elsif user.include? 'manager'
     user = 'david.quach'
-  when 'dept head'
+  elsif user.include?'dept head'
     user = 'dept.head'
-  when 'dept admin'
+  elsif user.include?'dept admin'
     user = 'dept.admin'
-  when 'company admin'
+  elsif user.include?'company admin'
     user = 'company.admin'
   else
     user = user.split(' ').join('.')
@@ -39,6 +34,6 @@ def login_as_user(user)
   @browser.text_field(id: 'employee_username').set user
   @browser.text_field(id: 'employee_password').set 'password'
   @browser.button(value: 'Login').click
-  @browser.element(text: 'Logout').wait_until_present
+  @browser.element(text: 'Logout').wait_until_present(10)
 end
 # rubocop:enable Style/MethodLength
