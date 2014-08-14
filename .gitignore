@@ -1,3 +1,8 @@
 .idea/
 coverage/
 *~
+.c9
+webdriver-profile*/
+screenshots/
+scratch.rb
+testing.rb
