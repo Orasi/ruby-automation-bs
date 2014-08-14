@@ -20,11 +20,11 @@ def login_as_user(user)
     user = 'test.user'
   elsif user.include? 'manager'
     user = 'david.quach'
-  elsif user.include?'dept head'
+  elsif user.include? 'dept head'
     user = 'dept.head'
-  elsif user.include?'dept admin'
+  elsif user.include? 'dept admin'
     user = 'dept.admin'
-  elsif user.include?'company admin'
+  elsif user.include? 'company admin'
     user = 'company.admin'
   else
     user = user.split(' ').join('.')
