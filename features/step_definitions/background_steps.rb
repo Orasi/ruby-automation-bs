@@ -39,5 +39,6 @@ def login_as_user(user)
   @browser.text_field(id: 'employee_username').set user
   @browser.text_field(id: 'employee_password').set 'password'
   @browser.button(value: 'Login').click
+  @browser.element(text: 'Logout').wait_until_present
 end
 # rubocop:enable Style/MethodLength
