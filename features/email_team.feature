@@ -9,8 +9,8 @@ Feature: Email Team
 		Examples:
 		
 		| user          |
-		| manager       |
-		| dept head     |
+		# | manager       |
+		# | dept head     |
 		| dept admin    |
 		| company admin |
 	
