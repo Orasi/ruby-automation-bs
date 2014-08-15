@@ -33,7 +33,13 @@ def login_as_user(user)
   @browser.goto 'https://bluesourcestaging.herokuapp.com'
   @browser.text_field(id: 'employee_username').set user
   @browser.text_field(id: 'employee_password').set 'password'
+  takescreenshot('login_with_[#{user}]_before')
   @browser.button(value: 'Login').click
   @browser.element(text: 'Logout').wait_until_present(10)
+  takescreenshot('login_with_[#{user}]_after')
 end
 # rubocop:enable Style/MethodLength
+
+def takescreenshot(text='screenshot')
+  @headless.take_screenshot "~/workspace/screenshots/#{text}_#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.png"
+end
