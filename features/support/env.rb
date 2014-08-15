@@ -13,6 +13,7 @@ end
 browser = Watir::Browser.new :firefox
 
 Before do
+  @headless = headless
   @browser = browser
 end
 
