@@ -1,10 +1,10 @@
-Given(/The employee page/i) do
-  @browser.goto 'https://bluesourcestaging.herokuapp.com'
-  @browser.link(text: "Can't log in?").wait_until_present
-  @browser.text_field(id: 'employee_username').set 'company.admin'
-  @browser.text_field(id: 'employee_password').set 'password'
-  @browser.button(value: 'Login').click
-end
+# Given(/The employee page/i) do
+#   @browser.goto 'https://bluesourcestaging.herokuapp.com'
+#   @browser.link(text: "Can't log in?").wait_until_present
+#   @browser.text_field(id: 'employee_username').set 'company.admin'
+#   @browser.text_field(id: 'employee_password').set 'password'
+#   @browser.button(value: 'Login').click
+# end
 
 When(/I sort by (.*) in (.*) order/i) do |sortby, order|
   @browser.table(class: 'table').wait_until_present
