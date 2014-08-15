@@ -21,20 +21,20 @@ Feature: Add Vacation For Employee
 		| dept admin    |
 		| company admin |
 		
-		| start date    |
-		| 04/25/14      |
-		| 08/27/14      |     
+		# | start date    |
+		# | 04/25/14      |
+		# | 08/27/14      |     
 		
-		| end date      |
-		| 05/05/14      |
-		| 09/03/14      |
+		# | end date      |
+		# | 05/05/14      |
+		# | 09/03/14      |
 		
-		| type             |
-		| sick             |
-		| vacation         |
-		| floating holiday |
-		| other            |
+		# | type             |
+		# | sick             |
+		# | vacation         |
+		# | floating holiday |
+		# | other            |
 		
-		| duration |
-		| full day |
-		| half day |
+		# | duration |
+		# | full day |
+		# | half day |
