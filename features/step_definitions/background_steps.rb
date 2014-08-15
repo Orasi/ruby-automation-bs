@@ -40,6 +40,8 @@ def login_as_user(user)
 end
 # rubocop:enable Style/MethodLength
 
-def takescreenshot(text='screenshot')
-  @headless.take_screenshot "~/workspace/screenshots/#{text}_#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.png"
+# rubocop:disable Style/LineLength
+def takescreenshot(text = 'screenshot')
+  @headless.take_screenshot '~/workspace/screenshots/' + text + '_#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.png'
 end
+# rubocop:enable Style/LineLength
