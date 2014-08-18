@@ -5,6 +5,7 @@ Feature: Sort By Employee Page
       Given that I am logged in as a company admin
       And I navigated to the employees page
 
+    @sort
     Scenario Outline: Sorting
       When I sort by <criteria> in <sort_order> order
       Then the <criteria> column should be sorted in <sort_order> order
