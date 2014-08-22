@@ -15,3 +15,11 @@ After do
     @browser.link(id: 'login-help-link').wait_until_present
   end
 end
+
+After('@add_departments') do
+  @browser.link(text: 'Admin').click
+  @browser.link(text: 'Departments').click
+  @browser.li(text: /#{@department}/i)
+          .span(class: 'glyphicon-trash').click
+  @browser.alert.ok
+end

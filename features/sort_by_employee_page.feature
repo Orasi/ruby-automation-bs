@@ -1,3 +1,4 @@
+@sort
 Feature: Sort By Employee Page
 	As a user I should be able to sort by any column in ascending or descending order and results should be shown.
 
