@@ -15,17 +15,22 @@ Then(/the (.*) column should be sorted in (.*) order/i) do |sortby, order|
   (1..row_count - 2).each do |index|
     previous_row = browser_table.rows[index]
     next_row = browser_table.rows[index + 1]
-    previous_text = previous_row.cells.select(&remove_angular_hidden_cells)[column_index].text
-    next_text = next_row.cells.select(&remove_angular_hidden_cells)[column_index].text
+    previous_text = previous_row
+                    .cells
+                    .select(&remove_angular_hidden_cells)[column_index].text
 
-    if previous_text == '' or next_text == ''
+    next_text = next_row
+                .cells
+                .select(&remove_angular_hidden_cells)[column_index].text
+
+    if previous_text == '' || next_text == ''
       next
     else
       if order == 'ascending'
-        puts expect(previous_text)
+        expect(previous_text)
           .to be <= next_text
       else
-        puts expect(previous_text)
+        expect(previous_text)
           .to be >= next_text
       end
     end
