@@ -42,6 +42,6 @@ end
 
 # rubocop:disable Style/LineLength
 def takescreenshot(text = 'screenshot')
-  @headless.take_screenshot '~/workspace/screenshots/' + text + '_#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.png'
+  @headless.take_screenshot './screenshots/' + text + '_#{Time.now.strftime("%Y-%m-%d_%H-%M-%S")}.png'
 end
 # rubocop:enable Style/LineLength
