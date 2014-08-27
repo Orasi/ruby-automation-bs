@@ -19,7 +19,9 @@ end
 
 After do |scenario|
   if scenario.failed?
-    screenshot = "./screenshots/FAILED_#{scenario.scenario_outline.feature.title}_#{scenario.name.gsub("|", "").strip}.png"
+    title = scenario.scenario_outline.feature.title
+    name = scenario.name.gsub('|', '').strip
+    screenshot = "./screenshots/FAILED_#{title}_#{name}.png"
     @browser.screenshot.save screenshot
   end
 end
