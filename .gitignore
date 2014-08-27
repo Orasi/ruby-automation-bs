@@ -1,5 +1,7 @@
 .idea/
 coverage/
 *~
+.zshrc-e
+.swp
 .c9
 webdriver-profile*/
