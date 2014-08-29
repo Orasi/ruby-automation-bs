@@ -1,9 +1,25 @@
-Given(/that I am logged in as a (\w+\s*\w+)/) do |user|
+Given(/that I am logged in as (.*)/i) do |user|
+  # select the appropriate user
+  if user == 'user'
+    user = 'test.user'
+  elsif user.include? 'manager'
+    user = 'david.quach'
+  elsif user.include? 'dept head'
+    user = 'dept.head'
+  elsif user.include? 'dept admin'
+    user = 'dept.admin'
+  elsif user.include? 'company admin'
+    user = 'company.admin'
+  else
+    user = user.split(' ').join('.')
+  end
+
+  # login to the site
   @browser.goto 'https://bluesourcestaging.herokuapp.com'
-  user = user.split(' ').join('.')
   @browser.text_field(id: 'employee_username').set user
   @browser.text_field(id: 'employee_password').set 'password'
   @browser.button(value: 'Login').click
+  @browser.element(text: 'Logout').wait_until_present(10)
 end
 
 And(/I navigated? to the (\w+\s*\w*) page/) do |page|
