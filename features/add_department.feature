@@ -7,7 +7,7 @@ Feature: Add Departments
 	In order for the admin to manage these departments, the admin
 	should have the ability to add departments.
 
-	Background: Log in as admin and navigate to departmetns page
+	Background: Log in as admin and navigate to departments page
 	Given that I am logged in as a company admin
 	And I navigate to the Admin Departments page
 
