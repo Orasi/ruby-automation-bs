@@ -4,19 +4,19 @@ Given(/that I am logged in as (.*)/i) do |user|
     user = 'test.user'
   elsif user.include? 'manager'
     user = 'manager.test'
-    @user = {first: "Manager-Test", last: "User", username: user}
+    @user = { first: 'Manager-Test', last: 'User', username: user }
   elsif user.include? 'dept head'
     user = 'dept.head'
-    @user = {first: "Department-Head", last: "User", username: user}
+    @user = { first: 'Department-Head', last: 'User', username: user }
   elsif user.include? 'dept admin'
     user = 'dept.admin'
-    @user = {first: "Department-Admin", last: "User", username: user}
+    @user = { first: 'Department-Admin', last: 'User', username: user }
   elsif user.include? 'company admin'
     user = 'company.admin'
-    @user = {first: "Company", last: "Admin", username: user}
+    @user = { first: 'Company', last: 'Admin', username: user }
   else
     user = user.split(' ').join('.')
-    @user = {first: user.split[0], last: user.split[1], username: user}
+    @user = { first: user.split[0], last: user.split[1], username: user }
   end
 
   # login to the site
