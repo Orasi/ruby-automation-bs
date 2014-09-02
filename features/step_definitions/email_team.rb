@@ -1,14 +1,14 @@
 When(/I select the email team button/i) do
   email_button = @browser.element(text: 'Email team')
   email_button.wait_until_present(5)
-  @email_list = email_button.link.href.sub('mailto:', '').split(';%20')
+  @email_list = email_button.link.href.sub('mailto:', '').split(';')
 end
 
 Then(/I should be able to send an email to my active direct reports/i) do
-  # display 20 per page and sort by Supervisor
+  # display 20 per page and show only Direct
   @browser.select_list(id: 'employee_preferences_resourcesPerPage').select_value('20')
-  @browser.link(text: 'Supervisor').click
-  @browser.link(text: 'Supervisor').click
+  @browser.element(class: 'btn', text: 'Direct').click
+  @browser.table(class: 'table').wait_until_present(5)
 
   # go through all the results to get the links to all
   # of the users that report to the current user
@@ -16,18 +16,14 @@ Then(/I should be able to send an email to my active direct reports/i) do
   loop do
     # get an array of the table
     user_table = @browser.table(class: 'table')
-    user_array = user_table.to_a
 
-    # get all of the relevant users
-    user_array.each_with_index do |user, i| # rubocop:disable Style/Next
-      if user[3] == @user[:first] + ' ' + @user[:last]
-        reporting_users << user_table[i][0].link.href
-      end
+    # get all of the users
+    (1..user_table.rows.count - 1).each do |i|
+      reporting_users << user_table[i][0].link.href
     end
 
-    # break if the last user's supervisor field is blank or on the last page of results
+    # break if the on the last page of results
     page_info = @browser.p(class: 'pull-right ng-binding').text.split
-    break if user_array[-1][3] == ''
     break if page_info[2] == page_info[4]
 
     # go to the next page of results
