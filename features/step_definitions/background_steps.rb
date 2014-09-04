@@ -1,17 +1,22 @@
-Given(/that I am logged in as (.*)/i) do |user|
+Given(/that I am logged in as (.*)$/i) do |user|
   # select the appropriate user
   if user == 'user'
     user = 'test.user'
   elsif user.include? 'manager'
-    user = 'david.quach'
+    user = 'manager.test'
+    @user = { first: 'Manager-Test', last: 'User', username: user }
   elsif user.include? 'dept head'
     user = 'dept.head'
+    @user = { first: 'Department-Head', last: 'User', username: user }
   elsif user.include? 'dept admin'
     user = 'dept.admin'
+    @user = { first: 'Department-Admin', last: 'User', username: user }
   elsif user.include? 'company admin'
     user = 'company.admin'
+    @user = { first: 'Company', last: 'Admin', username: user }
   else
     user = user.split(' ').join('.')
+    @user = { first: user.split[0], last: user.split[1], username: user }
   end
 
   # login to the site
@@ -22,8 +27,12 @@ Given(/that I am logged in as (.*)/i) do |user|
   @browser.element(text: 'Logout').wait_until_present(10)
 end
 
-And(/I navigated? to the (\w+\s*\w*) page/) do |page|
-  if page.split(' ').length > 1
+And(/I navigated? to the (\w+\s*\w*) page$/) do |page|
+  if page == 'employee summary'
+    goto_employee_summary
+  elsif page == 'manage pto'
+    @browser.element(class: 'btn', text: 'Manage', index: 2).click
+  elsif page.split(' ').length > 1
     page = page.split(' ')
     main_link = page[0]
     sub_link = page[1]

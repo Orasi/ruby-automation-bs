@@ -1,9 +1,9 @@
 Before do
   @employee = {
-    first_name: 'David',
-    last_name: 'Quach',
-    title: 'Manager',
-    supervisor: 'Adam Thomas',
+    first_name: 'Test',
+    last_name: 'User',
+    title: 'Software Consultant',
+    supervisor: 'Manager-Test User',
     project: 'WatchDogs2',
     location: 'Greensboro'
   }
