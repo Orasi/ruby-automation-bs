@@ -12,7 +12,7 @@ Feature: Add Vacation For Employee
 		Examples:
 
 		| user          | start_date | end_date   | type			 | duration |
-		| manager       | 2014-12-01 | 2014-12-02 | Sick			 | Ful      |
+		| manager       | 2014-12-01 | 2014-12-02 | Sick			 | Full     |
 		| dept head     | 2014-12-08 | 2014-12-09 | Vacation 		 | Full     |
 		| dept admin    | 2014-12-15 | 2014-12-16 | Floating Holiday | Half 	|
 		| company admin | 2014-12-22 | 2014-12-23 | Other			 | Half	    |
