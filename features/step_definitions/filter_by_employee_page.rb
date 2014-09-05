@@ -1,6 +1,19 @@
+When(/^I filter using the all button$/) do
+  @browser.element(class: 'btn', text: 'All').click
+  @browser.table(class: 'table').wait_until_present(5)
+  take_screenshot('All button')
+end
+
+When(/^I filter using the show inactives button$/) do
+  @browser.element(class: 'btn', text: 'Show Inactives').click
+  @browser.table(class: 'table').wait_until_present(5)
+  take_screenshot('Inactives button')
+end
+
 When(/^I filter using the direct button$/) do
   @browser.element(class: 'btn', text: 'Direct').click
   @browser.table(class: 'table').wait_until_present(5)
+  take_screenshot('Direct button')
 end
 
 Then(/^the employee table should show only direct reports$/) do
