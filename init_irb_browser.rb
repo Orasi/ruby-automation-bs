@@ -1,5 +1,4 @@
 require 'watir-webdriver'
-require 'rspec/expectations'
 require 'headless'
 
 # load the external functions to have access to the screenshot function
@@ -21,8 +20,10 @@ puts 'Logging into Blue Source as company.admin'
 @browser.button(value: 'Login').click
 @browser.element(text: 'Logout').wait_until_present(5)
 @browser.table(class: 'table').wait_until_present(5)
+
 take_screenshot('Browser_Loaded')
-puts 'Browser loaded and startup complete!'
+
+puts 'Browser loaded and initilization complete!'
 puts 'The @browser instance variable is now available for use.'
 puts 'See the Browser_Loaded image in the ./screenshots directory for verification of browser state.'
 puts 'Use the take_screenshot method to capture an image of the current browser state.'
