@@ -23,5 +23,6 @@ puts 'Logging into Blue Source as company.admin'
 @browser.table(class: 'table').wait_until_present(5)
 take_screenshot('Browser_Loaded')
 puts 'Browser loaded and startup complete!'
-puts 'The @browser instance variable is now available'
-puts 'See the Browser_Loaded screenshot for an image of the browser state.'
+puts 'The @browser instance variable is now available for use.'
+puts 'See the Browser_Loaded image in the ./screenshots directory for verification of browser state.'
+puts 'Use the take_screenshot method to capture an image of the current browser state.'
