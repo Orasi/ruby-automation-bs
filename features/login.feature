@@ -1,9 +1,28 @@
 @login
 Feature: Login
-	As a user I should be able to login to the homepage with valid credentials. 
+	Users will have the ability to request time off through
+    Bluesource.
 
-	Scenario: Login Happy Path
-      Given The login page
-      When I enter in valid credentials
-      And click the login button
+    In order for users to access Bluesource, they must be able
+    to login with a valid username and/or company email and
+    password.
+
+	Scenario: Successful login with username
+      Given I enter a valid username and password
+      When I log into Bluesource
       Then I should land on the homepage
+
+    Scenario: Successful login with company email
+      Given I enter a valid email and password
+      When I log into Bluesource
+      Then I should land on the homepage
+
+    Scenario: Login without username
+      Given I fill in only the password field
+      When I log into Bluesource
+      Then I should not be logged in
+
+    Scenario: Login without password
+      Given I fill in only the username field
+      When I log into Bluesource
+      Then I should not be logged in
