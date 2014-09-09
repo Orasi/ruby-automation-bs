@@ -1,15 +1,16 @@
+# Objects and methods associated with the login page
 class LoginPage
   include PageObject
 
   URL = 'bluesourcestaging.herokuapp.com'
 
-  #Objects on the page
+  # Objects on the page
   text_field(:username, id: 'employee_username')
   text_field(:password, id: 'employee_password')
   button(:login, name: 'commit')
   link(:login_help, text: "Can't log in?")
 
-  #Methods done on the objects
+  # Methods done on the objects
   def open
     @browser.goto URL
   end
@@ -19,6 +20,4 @@ class LoginPage
     self.password = password
     login
   end
-
 end
-

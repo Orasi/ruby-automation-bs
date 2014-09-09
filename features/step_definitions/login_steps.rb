@@ -11,7 +11,7 @@ Given(/I enter a valid (\w+) and password/i) do |login_with|
   @login_page.password = 'pass'
 end
 
-Given (/I fill in only the (\w+) field/i) do |field|
+Given(/I fill in only the (\w+) field/i) do |field|
   @login_page = LoginPage.new(@browser)
   @login_page.open
 
