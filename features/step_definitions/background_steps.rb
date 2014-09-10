@@ -20,11 +20,11 @@ Given(/that I am logged in as (.*)$/i) do |user|
   end
 
   # login to the site
-  @browser.goto 'https://bluesourcestaging.herokuapp.com'
-  @browser.text_field(id: 'employee_username').set user
-  @browser.text_field(id: 'employee_password').set 'password'
-  @browser.button(value: 'Login').click
-  @browser.element(text: 'Logout').wait_until_present(10)
+  login_page.open
+  login_page.login_with user, 'password'
+  home_page.wait_until 10 do
+    home_page.logout?
+  end
 end
 
 And(/I navigated? to the (\w+\s*\w*) page$/) do |page|
@@ -32,13 +32,7 @@ And(/I navigated? to the (\w+\s*\w*) page$/) do |page|
     goto_employee_summary
   elsif page == 'manage pto'
     @browser.element(class: 'btn', text: 'Manage', index: 2).click
-  elsif page.split(' ').length > 1
-    page = page.split(' ')
-    main_link = page[0]
-    sub_link = page[1]
-    @browser.link(href: '#', text: main_link).click
-    @browser.link(text: /#{sub_link}/i).click
   else
-    @browser.link(text: /#{page}/i).click
+    home_page.navigate_to(page)
   end
 end
