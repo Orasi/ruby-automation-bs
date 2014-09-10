@@ -1,3 +1,4 @@
+# Helpers to initialize the page objects
 module PageObjectHelpers
   def department_page
     @department_page ||= DepartmentPage.new(@browser)

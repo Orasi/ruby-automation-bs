@@ -12,7 +12,7 @@ end
 After do
   if home_page.logout?
     home_page.logout
-    login_page.wait_until 10, "Did not log out successfully" do
+    login_page.wait_until 10, 'Did not log out successfully' do
       login_page.login_help?
     end
   end

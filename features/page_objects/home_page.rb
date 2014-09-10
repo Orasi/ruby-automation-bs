@@ -4,7 +4,7 @@ class HomePage
 
   # Objects on the page
   link(:logout, text: 'Logout')
-  link(:admin, {text: 'Admin', href: '#'})
+  link(:admin, text: 'Admin', href: '#')
   link(:departments, text: 'Departments')
   link(:titles, text: 'Titles')
   link(:directory, text: 'Directory')
