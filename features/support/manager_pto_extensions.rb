@@ -4,7 +4,7 @@ module ManagerPtoHelpers
     employee = "#{@employee[:first_name]} #{@employee[:last_name]}"
     @browser.text_field(id: 'search-bar').set employee
     table = @browser.table(class: 'table')
-    table.wait_until_present(5)
+    table.wait_until_present(10)
     table.to_a.each_with_index do |user, i| # rubocop:disable Style/Next
       found = user[0] == @employee[:first_name] && user[1] == @employee[:last_name]
       table[i][0].link.click if found

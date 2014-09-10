@@ -10,16 +10,16 @@ Before do
 end
 
 After do
-  if @browser.link(href: '/logout').exists?
-    @browser.link(href: '/logout').click
-    @browser.link(id: 'login-help-link').wait_until_present
+  if home_page.logout?
+    home_page.logout
+    login_page.wait_until 10, 'Did not log out successfully' do
+      login_page.login_help?
+    end
   end
 end
 
 After('@add_departments') do
-  @browser.link(text: 'Admin').click
-  @browser.link(text: 'Departments').click
-  @browser.li(text: /#{@department}/i)
-          .span(class: 'glyphicon-trash').click
-  @browser.alert.ok
+  home_page.admin
+  home_page.departments
+  department_page.delete_department @department_name
 end

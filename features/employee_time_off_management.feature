@@ -3,7 +3,7 @@ Feature: Employee Time Off Management
 	
 	Background: Navigation to Employee Summary Page
 		Given that I am logged in as a company admin
-		And I navigate to the employee page
+		And I navigate to the employees page
 		And I note the data shown on the employee summary page
 		And I navigate to the manage pto page
 	
