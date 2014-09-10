@@ -25,9 +25,7 @@ After do |scenario|
 end
 
 After('@add_departments') do
-  @browser.link(text: 'Admin').click
-  @browser.link(text: 'Departments').click
-  @browser.li(text: /#{@department}/i)
-          .span(class: 'glyphicon-trash').click
-  @browser.alert.ok
+  home_page.admin
+  home_page.departments
+  department_page.delete_department @department_name
 end
