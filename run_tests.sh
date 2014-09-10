@@ -4,6 +4,9 @@
 # current feature files and present the user with a menu to select
 # which feature to run. The script then runs the selected feature(s)
 # while generating a a time-stamped html report of the test results.
+#
+# To run the script, go to the project's root directory and type:
+# bash run_tests.sh
 
 # set the colors
 red='\e[0;31m'
@@ -68,7 +71,7 @@ HEADLESS=true cucumber --format html --out $report --format pretty $feature
 echo " "
 echo -e "${yellow}||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||${NC}"
 echo " "
-echo "Testing complete. The report is located at:"
+echo "Testing complete. If there were no logic issues the report should be located here:"
 echo -e "${green}[$report]${NC}"
 echo " "
 echo -e "${yellow}||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||${NC}"
