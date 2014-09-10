@@ -1,4 +1,4 @@
-Given(/that I am logged in as (.*)$/i) do |user|
+Given(/that I am logged in as a (.*)$/i) do |user|
   # select the appropriate user
   if user == 'user'
     user = 'test.user'
