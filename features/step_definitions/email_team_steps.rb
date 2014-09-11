@@ -21,13 +21,8 @@ Then(/I should be able to send an email to my active direct reports/i) do
     (1..user_table.rows.count - 1).each do |i|
       reporting_users << user_table[i][0].link.href
     end
-
-    # break if the on the last page of results
-    page_info = @browser.p(class: 'pull-right ng-binding').text.split
-    break if page_info[2] == page_info[4]
-
-    # go to the next page of results
-    click_link('»')
+    # go to the next page if there is one
+    break unless goto_next_page
   end
 
   # loop through the list of reporting users to get their email addresses
@@ -43,3 +38,4 @@ Then(/I should be able to send an email to my active direct reports/i) do
   expect(@email_list.count).to eq(0)
 
 end
+
