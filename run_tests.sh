@@ -31,16 +31,17 @@ echo -e "${yellow}||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||${
 echo "Please type the number of the feature you would like to run:"
 OIFS=$IFS
 IFS='|'
+date_time=$(date +%Y%m%d_%H%M%S)
 select file in ${list}; do
     if ((REPLY == 1)); then
         feature=""
         echo -e "You chose to run ${green}all features${NC}."
-        report="./reports/All_Features_$(date +%F_%T).html"
+        report="./reports/All_Features_$date_time.html"
         break
     elif ((REPLY == 2)); then
         feature="--dry-run"
         echo -e "You chose to perform a ${green}dry-run of all features${NC}."
-        report="./reports/Dry-Run_All_Features_$(date +%F_%T).html"
+        report="./reports/Dry-Run_All_Features_$date_time.html"
         break
     elif ((REPLY == 3)); then
         echo "You chose to exit."
@@ -50,7 +51,7 @@ select file in ${list}; do
     else 
         echo -e "You chose to run the feature: ${green}[$file]${NC}"
         feature="features/$file.feature"
-        report="./reports/$file|$(date +%F_%T).html"
+        report="./reports/$file|$date_time.html"
         break
     fi
 done
