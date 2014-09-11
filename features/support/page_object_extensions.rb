@@ -11,6 +11,10 @@ module PageObjectHelpers
   def login_page
     @login_page ||= LoginPage.new(@browser)
   end
+
+  def employee_page
+    @employee_page ||= EmployeePage.new(@browser)
+  end
 end
 
 World(PageObjectHelpers)
