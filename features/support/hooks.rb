@@ -1,3 +1,5 @@
+require 'page-object'
+
 Before do
   @employee = {
     first_name: 'Test',
@@ -7,14 +9,20 @@ Before do
     project: 'WatchDogs2',
     location: 'Greensboro'
   }
+
+  # make sure the browser is logged out before beginning the new scenario
+  if @browser.link(href: '/logout').exists?
+    @browser.link(href: '/logout').click
+    @browser.link(id: 'login-help-link').wait_until_present
+  end
 end
 
-After do
-  if home_page.logout?
-    home_page.logout
-    login_page.wait_until 10, 'Did not log out successfully' do
-      login_page.login_help?
-    end
+After do |scenario|
+  # take a screenshot and add it to the report if the scenario failed.
+  if scenario.failed?
+    screenshot = "./screenshots/#{Time.now.getutc}_FAILED_#{scenario.name}_.png"
+    @browser.screenshot.save screenshot
+    embed screenshot, 'image/png'
   end
 end
 
