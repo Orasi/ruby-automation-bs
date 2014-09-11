@@ -14,7 +14,7 @@ When(/^I filter using the show inactives button$/) do
 end
 
 Then(/^the employee table should show only the inactive employees$/) do
-  pending # This step is on hold because the functionality isn't implemented on the website yet.
+  pending # This step is on hold because the functionality isn't implemented yet.
 end
 
 When(/^I filter using the direct button$/) do
@@ -33,4 +33,3 @@ Then(/^the employee table should show only direct reports$/) do
     end
   end
 end
-
