@@ -1,3 +1,5 @@
+require 'page-object'
+
 Before do
   @employee = {
     first_name: 'Test',
