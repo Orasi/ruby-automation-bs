@@ -7,7 +7,7 @@ Before do
     project: 'WatchDogs2',
     location: 'Greensboro'
   }
-  
+
   # make sure the browser is logged out before beginning the new scenario
   if @browser.link(href: '/logout').exists?
     @browser.link(href: '/logout').click
