@@ -21,7 +21,7 @@ module EmployeeTable
       total_rows = total_rows + @browser.table(class: 'table').rows.count - 1
       break unless goto_next_page
     end
-    total_rowsg
+    total_rows
   end
 end
 
