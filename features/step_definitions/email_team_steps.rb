@@ -38,4 +38,3 @@ Then(/I should be able to send an email to my active direct reports/i) do
   expect(@email_list.count).to eq(0)
 
 end
-
