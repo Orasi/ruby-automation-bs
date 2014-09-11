@@ -36,12 +36,12 @@ select file in ${list}; do
     if ((REPLY == 1)); then
         feature=""
         echo -e "You chose to run ${green}all features${NC}."
-        report="./reports/All_Features_$date_time.html"
+        report="./reports/All_Features|$date_time.html"
         break
     elif ((REPLY == 2)); then
         feature="--dry-run"
         echo -e "You chose to perform a ${green}dry-run of all features${NC}."
-        report="./reports/Dry-Run_All_Features_$date_time.html"
+        report="./reports/Dry-Run_All_Features|$date_time.html"
         break
     elif ((REPLY == 3)); then
         echo "You chose to exit."
