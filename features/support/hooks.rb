@@ -1,4 +1,4 @@
-Before do
+Before do |scenario|
   @employee = {
     first_name: 'Test',
     last_name: 'User',
@@ -18,7 +18,14 @@ end
 After do |scenario|
   # take a screenshot and add it to the report if the scenario failed.
   if scenario.failed?
-    screenshot = "./screenshots/#{Time.now.getutc}_FAILED_#{scenario.name}_.png"
+    case scenario
+      when Cucumber::Ast::Scenario
+        info = "#{scenario.feature.title}_#{scenario.name}"
+      when Cucumber::Ast::OutlineTable::ExampleRow
+        info = "#{scenario.scenario_outline.feature.title}_#{scenario.scenario_outline.name}_#{scenario.name.gsub('|', '').strip}"
+    end
+    time = Time.now.strftime('%Y%m%d_%H%M%S')
+    screenshot = "./screenshots/#{time}|FAILED|#{info}.png"
     @browser.screenshot.save screenshot
     embed screenshot, 'image/png'
   end
