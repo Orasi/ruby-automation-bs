@@ -1,8 +1,11 @@
 require 'watir-webdriver'
 require 'headless'
 
-# load the external functions to have access to the screenshot function
-load './features/step_definitions/external_functions.rb'
+# define the screenshot function
+def take_screenshot(text = 'screenshot')
+time = Time.now.strftime('%Y-%m-%d_%H-%M-%S')
+@browser.screenshot.save "./screenshots/#{text}_#{time}.png"
+end
 
 puts 'Creating headless instance'
 headless = Headless.new
