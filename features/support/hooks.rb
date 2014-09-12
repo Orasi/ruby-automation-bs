@@ -34,9 +34,7 @@ After do |scenario|
     time = Time.now.strftime('%Y%m%d_%H%M%S')
     screenshot = "./screenshots/#{time}|FAILED|#{info}.png"
     @browser.screenshot.save screenshot
-    # embed screenshot, 'image/png'
-    encoded_img = @browser.driver.screenshot_as(:base64)
-    embed("data:image/png;base64,#{encoded_img}",'image/png')
+    embed screenshot, 'image/png'
   end
 end
 
