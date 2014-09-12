@@ -1,7 +1,7 @@
 And(/I note the Time Off Details on the employee summary page$/i) do
   @browser.element(text: 'Time Off Info').click
   table = @browser.table(class: 'table', index: 2)
-  table.wait_until_present(2)
+  table.wait_until_present(10)
   @time_off_summary = table.to_a
 end
 
@@ -22,7 +22,7 @@ When(/I enter a (Vacation|Sick|Floating Holiday|Other) request for a (\w+) day t
   end
   @browser.element(class: 'btn', text: 'Half Day').click if duration == 'Half'
   @browser.button(text: 'Save Time Off').click
-  @browser.div(class: 'alert-success').wait_until_present(5)
+  @browser.div(class: 'alert-success').wait_until_present(10)
 end
 
 Then(/the PTO request should be saved$/) do

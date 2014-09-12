@@ -1,6 +1,6 @@
 When(/I select the email team button/i) do
   email_button = @browser.element(text: 'Email team')
-  email_button.wait_until_present(5)
+  email_button.wait_until_present(10)
   @email_list = email_button.link.href.sub('mailto:', '').split(';')
 end
 
@@ -8,7 +8,7 @@ Then(/I should be able to send an email to my active direct reports/i) do
   # display 20 per page and show only Direct
   @browser.select_list(id: 'employee_preferences_resourcesPerPage').select_value('20')
   @browser.element(class: 'btn', text: 'Direct').click
-  @browser.table(class: 'table').wait_until_present(5)
+  @browser.table(class: 'table').wait_until_present(10)
 
   # go through all the results to get the links to all
   # of the users that report to the current user
