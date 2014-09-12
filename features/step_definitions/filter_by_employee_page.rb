@@ -1,6 +1,6 @@
 When(/^I filter using the all button$/) do
   @browser.element(class: 'btn', text: 'All').click
-  @browser.table(class: 'table').wait_until_present(5)
+  @browser.table(class: 'table').wait_until_present(10)
 end
 
 Then(/^the employee table should show all employees$/) do
@@ -10,7 +10,7 @@ end
 
 When(/^I filter using the show inactives button$/) do
   @browser.element(class: 'btn', text: 'Show Inactives').click
-  @browser.table(class: 'table').wait_until_present(5)
+  @browser.table(class: 'table').wait_until_present(10)
 end
 
 Then(/^the employee table should show only the inactive employees$/) do
@@ -19,7 +19,7 @@ end
 
 When(/^I filter using the direct button$/) do
   @browser.element(class: 'btn', text: 'Direct').click
-  @browser.table(class: 'table').wait_until_present(5)
+  @browser.table(class: 'table').wait_until_present(10)
 end
 
 Then(/^the employee table should show only direct reports$/) do

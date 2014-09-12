@@ -3,10 +3,10 @@ module EmployeeTable
   def goto_next_page
     result = true
     next_button = @browser.ul(class: 'pagination').link(text: '»')
-    @browser.table(class: 'table').wait_until_present(5)
+    @browser.table(class: 'table').wait_until_present(10)
     page_info = @browser.p(class: 'pull-right ng-binding').text.split
     page_info[2] == page_info[4] ? result = false : next_button.click
-    @browser.table(class: 'table').wait_until_present(5)
+    @browser.table(class: 'table').wait_until_present(10)
     result
   end
 
@@ -17,7 +17,7 @@ module EmployeeTable
     # loop through each page to get the total employee count.
     total_rows = 0
     loop do
-      @browser.table(class: 'table').wait_until_present(5)
+      @browser.table(class: 'table').wait_until_present(10)
       total_rows = total_rows + @browser.table(class: 'table').rows.count - 1
       break unless goto_next_page
     end

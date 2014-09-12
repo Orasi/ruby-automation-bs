@@ -10,16 +10,16 @@ module ManagerPtoHelpers
       table[i][0].link.click if found
       break if found
     end
-    @browser.element(text: 'General Info').wait_until_present(5)
+    @browser.element(text: 'General Info').wait_until_present(10)
   end
 
   def clear_time_off
     trash_icon = @browser.element(class: 'glyphicon-trash', index: 0)
     while trash_icon.present?
       trash_icon.click
-      @browser.alert.wait_until_present(5)
+      @browser.alert.wait_until_present(10)
       @browser.alert.ok
-      @browser.element(class: 'table').wait_until_present(5)
+      @browser.element(class: 'table').wait_until_present(10)
     end
     puts 'Cleared time off for employee'
   end
