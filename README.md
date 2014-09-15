@@ -4,6 +4,8 @@
 
 Github repo for BlueSource Ruby automation
 
+Wiki page: [Bluesource Wiki](https://github.com/Orasi/ruby-automation-bs/wiki)
+
 Staging environment: [BlueSource Staging](http://bluesourcestaging.herokuapp.com/)
 
 ## Members
