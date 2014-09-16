@@ -36,7 +36,7 @@ end
 
 After do |scenario|
   # take a screenshot and add it to the report if the scenario failed.
-  if scenario.failed? and ENV['SCREENSHOTS'] == 'true'
+  if scenario.failed? && ENV['SCREENSHOTS'] == 'true'
     case scenario
     when Cucumber::Ast::Scenario
       title = scenario.feature.title

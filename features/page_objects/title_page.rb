@@ -1,3 +1,4 @@
+# Objects for the admin title page
 class TitlePage
   include PageObject
 
