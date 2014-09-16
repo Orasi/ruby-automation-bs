@@ -14,10 +14,14 @@ end
 
 Then(/the (.*) title should show on the titles page/) do |title|
   @title = title
+  home_page.admin
+  home_page.titles
   expect(title_page.titles_table).to include @title
 end
 
 Then(/the (.*) title should no longer be on the titles page/) do |title|
+  home_page.admin
+  home_page.titles
   expect(title_page.titles_table).not_to include title
 end
 

@@ -13,19 +13,19 @@ Feature: Manage Titles
   @add_title
   Scenario: Add Titles
     When I create a Contractor title
-    Then the Contractor title should show on the titles page
-    And an alert should appear confirming the title was created
+    Then an alert should appear confirming the title was created
+    And the Contractor title should show on the titles page
 
   @add_title
   Scenario: Edit Titles
     When I create a Contractor title
     And change the Contractor title to QA Tester
-    Then the QA Tester title should show on the titles page
-    And an alert should appear confirming the title was updated
+    Then an alert should appear confirming the title was updated
+    And the QA Tester title should show on the titles page
 
   @delete_title
   Scenario: Delete Titles
     When I create a Contractor title
     And delete the Contractor title
-    Then the Contractor title should no longer be on the titles page
-    And an alert should appear confirming the title was deleted
+    Then an alert should appear confirming the title was deleted
+    And the Contractor title should no longer be on the titles page
