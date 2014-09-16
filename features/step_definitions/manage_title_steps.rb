@@ -7,6 +7,8 @@ And(/change the (.*) title to (.*)/i) do |old_title, new_title|
 end
 
 And(/delete the (.*) title/i) do |title|
+  home_page.admin
+  home_page.titles
   title_page.delete_title title
 end
 
