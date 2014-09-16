@@ -66,7 +66,7 @@ echo -e "${green}$command${NC}"
 echo " "
 echo "Running tests..."
 echo " "
-HEADLESS=true cucumber --format html --out $report --format pretty $feature
+HEADLESS=true cucumber --format html --out $report --format pretty $feature SCREENSHOTS=true
 
 # finish up
 echo " "
