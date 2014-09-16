@@ -1,6 +1,7 @@
 Feature: Add Vacation For Employee
 	As a manager or higher user, I should be able to add vacation days for an employee that reports to me.
 
+    @add_vacation
 	Scenario Outline: Add Vacation Days For Employee
 		Given that I am logged in as <user>
 		And I navigate to the employee summary page
