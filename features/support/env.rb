@@ -2,6 +2,7 @@ require 'watir-webdriver'
 require 'rspec/expectations'
 require 'page-object'
 
+
 if ENV['HEADLESS']
   require 'headless'
   headless = Headless.new
