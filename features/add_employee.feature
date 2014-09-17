@@ -1,3 +1,4 @@
+@add_employees
 Feature: Add Employee
   
     In order for the admin to manage employess, the admin
@@ -12,3 +13,4 @@ Feature: Add Employee
       And add a employee
       Then the employee should show on the employees page
       And an alert should appear confirming the employee was added
+      
