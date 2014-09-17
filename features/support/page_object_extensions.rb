@@ -15,6 +15,10 @@ module PageObjectHelpers
   def employee_page
     @employee_page ||= EmployeePage.new(@browser)
   end
+
+  def title_page
+    @title_page ||= TitlePage.new(@browser)
+  end
 end
 
 World(PageObjectHelpers)
