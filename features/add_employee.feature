@@ -10,7 +10,7 @@ Feature: Add Employee
 
     Scenario: Adding Employee
       When I click on the add employee link
-      And add a employee
+      And add an employee
       Then the employee should show on the employees page
       And an alert should appear confirming the employee was added
       
