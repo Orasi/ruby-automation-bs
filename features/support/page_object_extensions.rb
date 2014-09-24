@@ -16,8 +16,8 @@ module PageObjectHelpers
     @employee_page ||= EmployeePage.new(@browser)
   end
 
-  def employee_details_page
-    @employee_details_page ||= EmployeeDetailsPage.new(@browser)
+  def employee_summary_page
+    @employee_summary_page ||= EmployeeSummaryPage.new(@browser)
   end
 
   def title_page

@@ -1,5 +1,5 @@
 # Objects on the employee page
-class EmployeeDetailsPage
+class EmployeeSummaryPage
   include PageObject
 
   # Objects on the page

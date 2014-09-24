@@ -24,7 +24,7 @@ Then(/I should be able to send an email to my active direct reports/i) do
   # and remove their email addresses from the email list
   reporting_users.each do |link|
     @browser.goto(link)
-    @email_list.delete(employee_details_page.employee_email)
+    @email_list.delete(employee_summary_page.employee_email)
   end
 
   # verify the email_button list is now empty
