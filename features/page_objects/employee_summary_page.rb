@@ -8,9 +8,9 @@ class EmployeeSummaryPage
   h4(:time_off_info_header, class: 'panel-title', text: 'Time Off Info')
   button(:close, class: 'close')
   button(:manage_general_info, data_target: '#modal_1')
-  element(:manage_project_info, :a, text: 'Manage', index: 0, class: 'btn btn-default btn-xs no-collapse') # rubocop:disable Metrics/LineLength
-  element(:manage_time_off_info, :a, text: 'Manage', index: 1, class: 'btn btn-default btn-xs no-collapse') # rubocop:disable Metrics/LineLength
-  element(:view_time_off_info, :a, text: 'View', class: 'btn btn-default btn-xs no-collapse') # rubocop:disable Metrics/LineLength
+  element(:manage_project_info, :a, text: 'Manage', index: 0, class: 'btn btn-default btn-xs no-collapse') # rubocop:disable Style/LineLength
+  element(:manage_time_off_info, :a, text: 'Manage', index: 1, class: 'btn btn-default btn-xs no-collapse') # rubocop:disable Style/LineLength
+  element(:view_time_off_info, :a, text: 'View', class: 'btn btn-default btn-xs no-collapse') # rubocop:disable Style/LineLength
   link(:expand_all, text: 'Expand All')
   link(:collapse_all, text: 'Collapse All')
   table(:general_info_table, index: 0)
