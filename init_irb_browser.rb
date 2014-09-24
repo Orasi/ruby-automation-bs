@@ -1,5 +1,7 @@
 require 'watir-webdriver'
 require 'headless'
+require 'pry'
+require 'pry-byebug'
 
 # define the screenshot function
 def take_screenshot(text = 'screenshot')
