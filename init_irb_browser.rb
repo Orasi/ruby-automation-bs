@@ -1,7 +1,6 @@
 require 'watir-webdriver'
 require 'headless'
 
-
 # define the screenshot function
 def take_screenshot(text = 'screenshot')
   time = Time.now.strftime('%Y-%m-%d_%H-%M-%S')
