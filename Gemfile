@@ -7,6 +7,4 @@ gem 'rubocop'
 gem 'rake'
 gem 'rspec-expectations', require: 'rspec/expectations'
 gem 'watir-webdriver'
-gem 'page-object'
-gem 'pry'
-gem 'pry-byebug'
+

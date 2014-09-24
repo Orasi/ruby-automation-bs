@@ -1,8 +1,7 @@
 require 'watir-webdriver'
 require 'rspec/expectations'
 require 'page-object'
-require 'pry'
-require 'pry-byebug'
+
 
 if ENV['HEADLESS']
   require 'headless'
