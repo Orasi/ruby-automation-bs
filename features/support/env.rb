@@ -1,9 +1,12 @@
 require 'watir-webdriver'
 require 'rspec/expectations'
 require 'page-object'
+require 'pry'
+require 'pry-byebug'
 
 if ENV['HEADLESS']
   require 'headless'
+  Kernel.puts 'Starting headless...'
   headless = Headless.new
   headless.start
   at_exit do
@@ -11,6 +14,7 @@ if ENV['HEADLESS']
   end
 end
 
+Kernel.puts 'Starting browser...'
 browser = Watir::Browser.new :firefox
 
 Before do
