@@ -58,7 +58,7 @@ done
 IFS=$OIFS
 
 # display the results
-command="HEADLESS=true cucumber --format html --out $report --format pretty $feature"
+command="HEADLESS=true cucumber --format html --out $report --format pretty $feature SCREENSHOTS=true"
 echo "The command that will be run is:"
 echo -e "${green}$command${NC}"
 
