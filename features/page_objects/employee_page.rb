@@ -8,6 +8,7 @@ class EmployeePage
   div(:email_team, text: 'Email team')
   label(:direct, text: 'Direct')
   paragraph(:results, class: 'ng-binding')
+  text_field(:search_employee, id: 'search-bar')
 
   # Methods done on the objects
   def total_employee_results

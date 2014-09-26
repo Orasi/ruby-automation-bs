@@ -31,7 +31,7 @@ And(/I navigated? to the (\w+\s*\w*) page$/) do |page|
   if page == 'employee summary'
     goto_employee_summary
   elsif page == 'manage pto'
-    @browser.element(class: 'btn', text: 'Manage', index: 2).click
+    employee_summary_page.manage_time_off_info_element.click
   else
     home_page.navigate_to(page)
   end
