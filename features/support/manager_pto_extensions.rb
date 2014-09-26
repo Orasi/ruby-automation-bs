@@ -2,15 +2,15 @@
 module ManagerPtoHelpers
   def goto_employee_summary
     employee = "#{@employee[:first_name]} #{@employee[:last_name]}"
-    @browser.text_field(id: 'search-bar').set employee
-    table = @browser.table(class: 'table')
-    table.wait_until_present(10)
+    employee_page.search_employee = employee
+    table = employee_page.employee_table_element
+    table.when_present(10)
     table.to_a.each_with_index do |user, i| # rubocop:disable Style/Next
-      found = user[0] == @employee[:first_name] && user[1] == @employee[:last_name]
-      table[i][0].link.click if found
+      found = user[0].text + ' ' + user[1].text == employee
+      table[i][0].link_element.click if found
       break if found
     end
-    @browser.element(text: 'General Info').wait_until_present(10)
+    employee_summary_page.general_info_header_element.when_present(10)
   end
 
   def clear_time_off
