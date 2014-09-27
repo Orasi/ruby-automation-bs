@@ -1,4 +1,4 @@
-# Objects on the employee page
+# Objects on the employee time off page
 class EmployeeTimeOffPage
   include PageObject
 
