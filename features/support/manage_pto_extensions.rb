@@ -14,11 +14,11 @@ module ManagerPtoHelpers
   end
 
   def clear_time_off
-    while employee_summary_page.delete_request?
-      employee_summary_page.delete_request_element.click
+    while employee_time_off_page.delete_request?
+      employee_time_off_page.delete_request_element.click
       @browser.alert.wait_until_present(10)
       @browser.alert.ok
-      employee_time_off_page.vacation_table.when_present(10)
+      employee_time_off_page.vacation_table_element.when_present(10)
     end
     puts 'Cleared time off for employee'
   end

@@ -12,6 +12,7 @@ Before do
   }
 end
 
+
 After do
   # make sure the browser is logged out before beginning the new scenario
   if home_page.logout?
@@ -22,9 +23,6 @@ After do
   end
 end
 
-After('@add_vacation') do
-  clear_time_off
-end
 After('@add_departments') do
   home_page.admin
   home_page.departments
