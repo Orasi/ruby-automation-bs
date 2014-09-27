@@ -20,6 +20,10 @@ module PageObjectHelpers
     @employee_summary_page ||= EmployeeSummaryPage.new(@browser)
   end
 
+  def employee_time_off_page
+    @employee_time_off_page ||= EmployeeTimeOffPage.new(@browser)
+  end
+
   def title_page
     @title_page ||= TitlePage.new(@browser)
   end

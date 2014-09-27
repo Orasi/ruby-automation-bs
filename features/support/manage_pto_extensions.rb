@@ -14,12 +14,11 @@ module ManagerPtoHelpers
   end
 
   def clear_time_off
-    trash_icon = @browser.element(class: 'glyphicon-trash', index: 0)
-    while trash_icon.present?
-      trash_icon.click
+    while employee_summary_page.delete_request?
+      employee_summary_page.delete_request_element.click
       @browser.alert.wait_until_present(10)
       @browser.alert.ok
-      @browser.element(class: 'table').wait_until_present(10)
+      employee_time_off_page.vacation_table.when_present(10)
     end
     puts 'Cleared time off for employee'
   end
