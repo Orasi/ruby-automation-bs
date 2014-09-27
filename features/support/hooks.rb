@@ -12,7 +12,6 @@ Before do
   }
 end
 
-
 After do
   # make sure the browser is logged out before beginning the new scenario
   if home_page.logout?
