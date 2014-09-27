@@ -17,6 +17,7 @@ class EmployeeSummaryPage
   table(:project_info_table, index: 1)
   table(:time_off_info_table, index: 2)
 
+
   # Methods done on the objects
   def employee_username
     general_info_table_element[0][1].text
