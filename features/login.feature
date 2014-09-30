@@ -4,16 +4,10 @@ Feature: Login
     Bluesource.
 
     In order for users to access Bluesource, they must be able
-    to login with a valid username and/or company email and
-    password.
+    to login with a valid username and password.
 
 	Scenario: Successful login with username
       Given I enter a valid username and password
-      When I log into Bluesource
-      Then I should land on the homepage
-
-    Scenario: Successful login with company email
-      Given I enter a valid email and password
       When I log into Bluesource
       Then I should land on the homepage
 
