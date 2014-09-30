@@ -25,6 +25,6 @@ When(/I enter a (Vacation|Sick|Floating Holiday|Other) request for a (\w+) day t
 end
 
 Then(/the PTO request should be saved$/) do
-  expect(@browser.text).to include('Time off successfully saved.')
+  expect(@browser.div(class: 'alert').text).to include('Time off successfully created.')
   @browser.buttons(class: 'close')[0].click
 end
