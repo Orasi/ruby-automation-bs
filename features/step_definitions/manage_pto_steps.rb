@@ -6,6 +6,8 @@ And(/I note the Time Off Details on the employee summary page$/i) do
 end
 
 When(/I enter a (Vacation|Sick|Floating Holiday|Other) request for a (\w+) day that starts on (\d+\-\d+\-\d+) and ends (\d+\-\d+\-\d+)$/i) do |type, duration, start_date, end_date| # rubocop:disable Style/LineLength
+  # clear any existing time off before trying to add new
+  clear_time_off
   # add the time off
   @browser.input(name: 'new[vacation][start_date]').to_subtype.set start_date
   sleep 1
